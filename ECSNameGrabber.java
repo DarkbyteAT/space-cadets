@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+/**Using JSoup version 1.12.1 - jsoup-1.12.1.jar*/
 public class ECSNameGrabber {																																	//Declares the main class for the ECS Name Grabber program, contains main method.
 	public static void main(String[] args) {																													//Main method declaration, entry point for program
 		String id = JOptionPane.showInputDialog(null, "Enter the email ID of the person you would like to know the name of."); 	 								//Gets the email ID of the person to find using a GUI box
