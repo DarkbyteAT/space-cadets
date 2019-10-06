@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.atlne.spirograph.MainController">
+   <children>
+      <Slider fx:id="R" blockIncrement="1.0" layoutX="564.0" layoutY="621.0" max="400.0" onDragDetected="#draw" prefHeight="20.0" prefWidth="200.0" showTickLabels="true" value="200.0" />
+      <Label layoutX="595.0" layoutY="600.0" text="Radius of large circle" />
+      <Slider fx:id="r" blockIncrement="1.0" layoutX="564.0" layoutY="678.0" max="400.0" onDragDetected="#draw" prefHeight="20.0" prefWidth="200.0" showTickLabels="true" value="100.0" />
+      <Label layoutX="595.0" layoutY="655.0" text="Radius of small circle" />
+      <Slider fx:id="O" blockIncrement="1.0" layoutX="565.0" layoutY="739.0" max="400.0" onDragDetected="#draw" prefHeight="20.0" prefWidth="200.0" showTickLabels="true" value="50.0" />
+      <Label layoutX="591.0" layoutY="718.0" onDragDropped="#draw" text="Pen offset from centre" />
+      <Slider fx:id="dt" blockIncrement="1.0" layoutX="15.0" layoutY="611.0" majorTickUnit="100.0" max="1000.0" min="1.0" onDragDetected="#draw" prefHeight="45.0" prefWidth="200.0" value="100.0" />
+      <Label layoutX="79.0" layoutY="599.0" text="Detail level" />
+      <ColorPicker fx:id="startColour" editable="true" layoutX="35.0" layoutY="675.0" onAction="#draw">
+      </ColorPicker>
+      <Label layoutX="52.0" layoutY="644.0" text="Starting pen colour" />
+      <ColorPicker fx:id="endColour" editable="true" layoutX="36.0" layoutY="746.0" onAction="#draw">
+      </ColorPicker>
+      <Label layoutX="54.0" layoutY="718.0" text="Ending pen colour" />
+      <Button layoutX="721.0" layoutY="14.0" mnemonicParsing="false" onAction="#draw" text="Draw" />
+      <Canvas fx:id="canvas" height="600.0" onMousePressed="#draw" width="600.0" />
+   </children>
+</AnchorPane>
